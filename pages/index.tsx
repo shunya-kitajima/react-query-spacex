@@ -12,6 +12,11 @@ const Home: NextPage = () => {
         Fetching by useQuery
       </p>
       <RocketList />
+      <Link href="/read-cache" passHref>
+        <div className="mt-20 flex items-center cursor-pointer">
+          <ChevronDoubleRightIcon className="h-5 w-5 mx-1 text-blue-500" />
+        </div>
+      </Link>
     </Layout>
   )
 }
