@@ -20,5 +20,6 @@ export const useQueryRockets = () => {
     queryKey: ['rockets'],
     queryFn: fetchRockets,
     staleTime: Infinity,
+    refetchOnWindowFocus: false,
   })
 }
