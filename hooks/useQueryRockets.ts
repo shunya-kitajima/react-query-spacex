@@ -14,3 +14,11 @@ export const fetchRockets = async () => {
   )
   return data
 }
+
+export const useQueryRockets = () => {
+  return useQuery<Rocket[], Error>({
+    queryKey: ['rockets'],
+    queryFn: fetchRockets,
+    staleTime: Infinity,
+  })
+}
