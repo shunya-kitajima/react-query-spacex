@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { useQueryClient } from 'react-query'
+import { useQueryClient } from '@tanstack/react-query'
 import { ChevronDoubleLeftIcon } from '@heroicons/react/20/solid'
 import { Rocket } from '../types/types'
 import { Layout } from '../components/Layout'
@@ -8,7 +8,7 @@ import { RocketItem } from '../components/RocketItem'
 
 const ReacCache: React.FC = () => {
   const queryClient = useQueryClient()
-  const data = queryClient.getQueryData<Rocket[]>('rockets')
+  const data = queryClient.getQueryData<Rocket[]>(['rockets'])
   console.log(data)
 
   return (
