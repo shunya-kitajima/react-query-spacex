@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { ChevronDoubleRightIcon } from '@heroicons/react/20/solid'
 import { Layout } from '../components/Layout'
 import { RocketList } from '../components/RocketList'
-import { useQueryRockets } from '../hooks/useQueryRockets'
 
 const Home: NextPage = () => {
   return (
