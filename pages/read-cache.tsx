@@ -8,7 +8,7 @@ import { RocketItem } from '../components/RocketItem'
 
 const ReacCache: React.FC = () => {
   const queryClient = useQueryClient()
-  const data = queryClient.getQueryData<Rocket[]>(['rockets'])
+  const data = queryClient.getQueryData<Rocket[]>('rockets')
   console.log(data)
 
   return (

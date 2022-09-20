@@ -17,7 +17,7 @@ export const fetchRockets = async () => {
 
 export const useQueryRockets = () => {
   return useQuery<Rocket[], Error>({
-    queryKey: ['rockets'],
+    queryKey: 'rockets',
     queryFn: fetchRockets,
     staleTime: Infinity,
     refetchOnWindowFocus: false,
