@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useQueryClient } from 'react-query'
-import { ChevronDoubleRightIcon } from '@heroicons/react/20/solid'
+import { ChevronDoubleLeftIcon } from '@heroicons/react/20/solid'
 import { Rocket } from '../types/types'
 import { Layout } from '../components/Layout'
 import { RocketItem } from '../components/RocketItem'
@@ -9,6 +9,7 @@ import { RocketItem } from '../components/RocketItem'
 const ReacCache: React.FC = () => {
   const queryClient = useQueryClient()
   const data = queryClient.getQueryData<Rocket[]>(['rockets'])
+  console.log(data)
 
   return (
     <Layout title="read cache">
@@ -22,7 +23,7 @@ const ReacCache: React.FC = () => {
       </ul>
       <Link href="/" passHref>
         <div className="mt-20 flex items-center cursor-pointer">
-          <ChevronDoubleRightIcon className="h-5 w-5 mx-1 text-blue-500" />
+          <ChevronDoubleLeftIcon className="h-5 w-5 mx-1 text-blue-500" />
         </div>
       </Link>
     </Layout>
