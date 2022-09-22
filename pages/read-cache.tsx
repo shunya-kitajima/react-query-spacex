@@ -17,11 +17,6 @@ const ReadCache: React.FC = () => {
         Read out cache data
       </p>
       <RocketList status="" rockets={data} />
-      <ul>
-        {data?.map((rocket) => (
-          <RocketItem key={rocket.id} rocket={rocket} />
-        ))}
-      </ul>
       <Link href="/" passHref>
         <div className="mt-20 flex items-center cursor-pointer">
           <ChevronDoubleLeftIcon className="h-5 w-5 mx-1 text-blue-500" />
