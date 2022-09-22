@@ -10,7 +10,6 @@ import { RocketList } from '../components/RocketList'
 const ReadCache: React.FC = () => {
   const queryClient = useQueryClient()
   const data = queryClient.getQueryData<Rocket[]>('rockets')
-  console.log(data)
 
   return (
     <Layout title="read cache">
