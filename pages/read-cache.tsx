@@ -5,6 +5,7 @@ import { ChevronDoubleLeftIcon } from '@heroicons/react/20/solid'
 import { Rocket } from '../types/types'
 import { Layout } from '../components/Layout'
 import { RocketItem } from '../components/RocketItem'
+import { RocketList } from '../components/RocketList'
 
 const ReadCache: React.FC = () => {
   const queryClient = useQueryClient()
@@ -16,6 +17,7 @@ const ReadCache: React.FC = () => {
       <p className="my-5 text-blue-500 text-xl font-bold">
         Read out cache data
       </p>
+      <RocketList status="" rockets={data} />
       <ul>
         {data?.map((rocket) => (
           <RocketItem key={rocket.id} rocket={rocket} />
