@@ -1,19 +1,19 @@
 import React from 'react'
 import Link from 'next/link'
-import { useQueryClient } from '@tanstack/react-query'
+import { useQueryClient } from 'react-query'
 import { ChevronDoubleLeftIcon } from '@heroicons/react/20/solid'
 import { Rocket } from '../types/types'
 import { Layout } from '../components/Layout'
 import { RocketItem } from '../components/RocketItem'
 
-const ReacCache: React.FC = () => {
+const ReadCache: React.FC = () => {
   const queryClient = useQueryClient()
-  const data = queryClient.getQueryData<Rocket[]>(['rockets'])
+  const data = queryClient.getQueryData<Rocket[]>('rockets')
   console.log(data)
 
   return (
     <Layout title="read cache">
-      <p className="my-5 text-blue-500 text-tl font-bold">
+      <p className="my-5 text-blue-500 text-xl font-bold">
         Read out cache data
       </p>
       <ul>
@@ -30,4 +30,4 @@ const ReacCache: React.FC = () => {
   )
 }
 
-export default ReacCache
+export default ReadCache

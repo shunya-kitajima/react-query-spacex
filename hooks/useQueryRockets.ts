@@ -1,5 +1,5 @@
 import { request } from 'graphql-request'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery } from 'react-query'
 import { Rocket } from '../types/types'
 import { GET_ROCKETS } from '../queries/queries'
 
@@ -17,7 +17,7 @@ export const fetchRockets = async () => {
 
 export const useQueryRockets = () => {
   return useQuery<Rocket[], Error>({
-    queryKey: ['rockets'],
+    queryKey: 'rockets',
     queryFn: fetchRockets,
     staleTime: Infinity,
     refetchOnWindowFocus: false,
